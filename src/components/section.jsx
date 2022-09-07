@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function Section({children, bg_image}) {
+export default function Section({children}) {
   return (
-    <section style={{backgroundImage: `url(${bg_image})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+    <section>
       {children}
     </section>
   );
