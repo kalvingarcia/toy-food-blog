@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function Section({children}) {
+export default function Section({style, children}) {
   return (
-    <section>
+    <section style={style}>
       {children}
     </section>
   );
