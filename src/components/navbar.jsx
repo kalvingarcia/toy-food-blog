@@ -1,9 +1,15 @@
 import React, {Component} from 'react';
 
 export default class Navbar extends Component {
+  sticky = {
+    position: 'fixed',
+    width: '100%',
+    zIndex: 100
+  }
+
   render() {
     return (
-      <nav className="navbar navbar-expand-lg bg-light">
+      <nav className="navbar navbar-expand-lg bg-light" style={this.sticky}>
         <div className="container-fluid">
           <span className="navbar-brand">Comí Comé</span>
           <ul className="navbar-nav">

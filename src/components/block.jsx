@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 
-export default class Block extends Component {
-  render() {
-    return (
-      <div className={this.props.className}>
-        {this.props.children}
-      </div>
-    );
+export default function Block({className, children}) {
+  var style = {
+    overflow: 'hidden'
   }
+
+  return (
+    <div className={className} style={style}>
+      {children}
+    </div>
+  );
 }

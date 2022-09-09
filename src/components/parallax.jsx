@@ -18,6 +18,7 @@ export default class Parallax extends Component {
   }
 
   parallax = {
+    objectFit: 'contain',
     overflow: 'hidden'
   }
 
@@ -31,8 +32,8 @@ export default class Parallax extends Component {
 
   handle_scroll = event => {
     var delta = [
-      -100 + event.composedPath()[1].scrollX * .6,
-      -100 + event.composedPath()[1].scrollY * .6
+      -100 - event.composedPath()[1].scrollX * .2,
+      -100 - event.composedPath()[1].scrollY * .2
     ];
     this.setState({style: {
       transform: `translate(${delta[0]}px, ${delta[1]}px)`
