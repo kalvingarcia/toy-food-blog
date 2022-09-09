@@ -4,7 +4,6 @@ import Navbar from './components/navbar';
 import Home from './pages/home';
 import Recipes from './pages/recipes';
 import About from './pages/about';
-import './App.css';
 
 export default class App extends Component {
   render() {
