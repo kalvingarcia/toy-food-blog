@@ -25,9 +25,10 @@ export default class Home extends Component {
         </Section>
         <Band
           text="Division"
-          spacer=" "
+          spacer="rectangle"
           repeat={['true', 4]}
           scroll={['true', 'slow']}
+          colorChange={['false']}
         />
         <Section>
         </Section>
