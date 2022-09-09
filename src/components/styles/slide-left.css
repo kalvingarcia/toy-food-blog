@@ -1,0 +1,12 @@
+.scrolling {
+  animation: slide-left 20s linear infinite;
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-300%);
+  }
+}
