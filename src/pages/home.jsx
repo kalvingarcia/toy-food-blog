@@ -34,14 +34,7 @@ export default class Home extends Component {
           colorChange={['true', ['#ff0000', '#00ff00', '#ffff00']]}
         />
         <FeaturedSection num={3} />
-        <Section className='row' height='800px'>
-          <Block className='col-sm'>
-            <LinkedPost />
-          </Block>
-          <Block className='col-sm'>
-            <Parallax bg_image={spaghetti}/>
-          </Block>
-        </Section>
+        <LinkedPost bg_image={spaghetti} />
       </main>
     );
   }
