@@ -4,6 +4,7 @@ import Navbar from './components/navbar';
 import Home from './pages/home';
 import Recipes from './pages/recipes';
 import About from './pages/about';
+import Footer from './components/footer';
 
 export default class App extends Component {
   render() {
@@ -15,6 +16,7 @@ export default class App extends Component {
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/about" element={<About />} />
         </Routes>
+        <Footer />
       </Router>
     );
   }
