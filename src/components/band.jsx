@@ -5,7 +5,7 @@ import './styles/slide-left.css'
 export default class Band extends Component {
   state = {
     pos: 0,
-    color: '#ff0000'
+    color: '#000000'
   }
 
   componentDidMount() {

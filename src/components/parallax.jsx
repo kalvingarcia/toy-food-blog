@@ -5,7 +5,7 @@ export default class Parallax extends Component {
     style: {
       objectFit: 'cover',
       willChange: 'transform',
-      transform: `translate(-100px, -100px)`
+      transform: `translate(-10%, -50%)`
     }
   }
 
@@ -32,11 +32,11 @@ export default class Parallax extends Component {
 
   handle_scroll = event => {
     var delta = [
-      -100 - event.composedPath()[1].scrollX * .2,
-      -100 - event.composedPath()[1].scrollY * .2
+      -10 + event.composedPath()[1].scrollX * .01,
+      -50 + event.composedPath()[1].scrollY * .01
     ];
     this.setState({style: {
-      transform: `translate(${delta[0]}px, ${delta[1]}px)`
+      transform: `translate(${delta[0]}%, ${delta[1]}%)`
     }});
   }
 }
