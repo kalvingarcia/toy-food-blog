@@ -4,16 +4,12 @@ export default class ImageWithCaption extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <img src={this.props.image} alt=""/>
-        </div>
-        <svg width="400" height="180">
+      <div className="image-with-captions">
+        <img src={this.props.image} alt="" />
+        <svg height='30' width='30'>
           {this.draw_shape(this.props.shape)}
         </svg>
-        <div>
-          <span>{this.props.caption}</span>
-        </div>
+        <span>{this.props.caption}</span>
       </div>
     );
   }
@@ -23,33 +19,29 @@ export default class ImageWithCaption extends Component {
       case "rectangle":
         return (
            <rect
-            width="400"
-            height="100"
-            style={{fill: 'rgb(0,0,255)', strokeWidth: 10, stroke: 'rgb(0,0,0)'}}
+            width="30"
+            height="30"
+            style={{fill: 'black'}}
            />
         );
       case "rounded-rectangle":
         return (
           <rect
-            x="50"
-            y="20"
-            rx="20"
-            ry="20"
-            width="150"
-            height="150"
-            style={{fill: 'red', stroke: 'black', strokeWidth: 5, opacity: 0.5}}
+            rx="5"
+            ry="5"
+            width="30"
+            height="30"
+            style={{fill: 'black'}}
           />
         );
       case "circle":
       default:
         return (
           <circle
-            cx="50"
-            cy="50"
-            r="40"
-            stroke="green"
-            stroke-width="4"
-            fill="yellow"
+            cx="15"
+            cy="15"
+            r="15"
+            fill="black"
           />
         );
     }

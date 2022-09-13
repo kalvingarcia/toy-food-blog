@@ -1,0 +1,19 @@
+.image-with-captions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: 'Athiti';
+  font-size: 30px;
+  margin: auto;
+}
+
+.image-with-captions img {
+  padding: 30px;
+  height: 400px;
+  width: 400px;
+}
+
+.image-with-captions span {
+  padding: 20px;
+}
