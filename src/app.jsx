@@ -5,12 +5,17 @@ import Home from './pages/home';
 import Recipes from './pages/recipes';
 import About from './pages/about';
 import Footer from './components/footer';
+import colors from './assets/utils/colors';
 
 export default class App extends Component {
   render() {
     return (
       <Router>
-        <Navbar current={this.current_page} />
+        <Navbar
+          current={this.current_page}
+          pos='sticky'
+          color={colors.ny_pink}
+        />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/recipes" element={<Recipes />} />

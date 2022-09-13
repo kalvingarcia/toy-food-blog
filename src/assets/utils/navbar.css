@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  font-family: 'Mitr';
+}
+
+.brand-logo {
+  padding: 10px;
+  margin: auto auto auto 10px;
+  font-size: 40px;
+}
+
+.nav-items {
+  margin: auto 10px auto auto;
+  overflow: hidden;
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.nav-link {
+  float: left;
+}
+.nav-link a {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+}
+.nav-link a:hover {
+  background-color: #000000;
+  opacity: .3;
+}
