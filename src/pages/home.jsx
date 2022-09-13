@@ -9,20 +9,20 @@ import LinkedPost from '../components/linked-post';
 import colors from '../assets/utils/colors';
 import me from '../assets/images/me.png';
 import rice from '../assets/images/rice.jpg';
-import spaghetti from '../assets/images/spaghetti.jpg'
+import spaghetti from '../assets/images/spaghetti.jpg';
 
 export default class Home extends Component {
   render() {
     return (
       <main>
         <Section className='row' height='800px'>
-            <Block className='col-sm'>
+            <Block className='column-50'>
               <Parallax bg_image={rice} />
             </Block>
-            <Block className='col-sm'>
+            <Block className='column-50'>
               <ImageWithCaption
                 image={me}
-                shape='rounded-rectangle'
+                shape='circle'
                 caption="Welcome to our food blog"
               />
             </Block>

@@ -5,11 +5,11 @@ import Block from './block';
 import Parallax from './parallax';
 
 export default class LinkedPost extends Component {
-  constructor(props) {
-    super(props)
-
-    //a call to the db for the post information
-  }
+  // constructor(props) {
+  //   super(props)
+  //
+  //   //a call to the db for the post information
+  // }
 
   render() {
     return (
