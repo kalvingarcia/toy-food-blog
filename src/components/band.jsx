@@ -1,22 +1,21 @@
 import React, {Component} from 'react';
 import Section from './section'
-import './styles/slide-left.css'
 
 export default class Band extends Component {
   state = {
-    pos: 0,
-    color: '#000000'
+    pos: 1,
+    color: this.props.colorChange[1][0]
   }
 
   componentDidMount() {
     if(this.props.colorChange[0] === 'true')
-      this.change = setInterval(this.color_change, 1000)
+      this.change = setInterval(this.color_change, 5000)
   }
 
   render() {
     return (
       <Section color={this.state.color}>
-        <div style={this.render_scroll()}>
+        <div className="band" style={this.render_scroll()}>
           {this.render_text()}
         </div>
       </Section>
@@ -29,10 +28,8 @@ export default class Band extends Component {
   }
 
   render_scroll() {
-    if (this.props.scroll[0] === 'true') {
+    if (this.props.scroll[0] === 'true')
       return ({
-          display: 'flex',
-          flexShrink: '0',
           animation: `slide-left ${(() => {
             switch (this.props.scroll[1]) {
               case 'slow':
@@ -45,7 +42,6 @@ export default class Band extends Component {
             }
           })()}s linear infinite`
       });
-    }
   }
 
   render_text() {
@@ -60,26 +56,24 @@ export default class Band extends Component {
           switch(this.props.spacer) {
             case "rectangle":
               display.push(
-                <svg key={(i + 1) * 1000 + 1}>
+                <svg width="30" height="30" key={(i + 1) * 1000 + 1}>
                   <rect
-                    width="400"
-                    height="100"
-                    style={{fill: 'rgb(0,0,255)', strokeWidth: 10, stroke: 'rgb(0,0,0)'}}
+                   width="30"
+                   height="30"
+                   style={{fill: 'black'}}
                   />
                 </svg>
               );
               break;
             case "rounded-rectangle":
               display.push(
-                <svg key={(i + 1) * 1000 + 1}>
+                <svg width="30" height="30" key={(i + 1) * 1000 + 1}>
                   <rect
-                    x="50"
-                    y="20"
-                    rx="20"
-                    ry="20"
-                    width="150"
-                    height="150"
-                    style={{fill: 'red', stroke: 'black', strokeWidth: 5, opacity: 0.5}}
+                    rx="5"
+                    ry="5"
+                    width="30"
+                    height="30"
+                    style={{fill: 'black'}}
                   />
                 </svg>
               );
@@ -87,14 +81,12 @@ export default class Band extends Component {
             case "circle":
             default:
               display.push(
-                <svg key={(i + 1) * 1000 + 1}>
+                <svg width="30" height="30" key={(i + 1) * 1000 + 1}>
                   <circle
-                    cx="50"
-                    cy="50"
-                    r="40"
-                    stroke="green"
-                    stroke-width="4"
-                    fill="yellow"
+                    cx="15"
+                    cy="15"
+                    r="15"
+                    fill="black"
                   />
                 </svg>
               );

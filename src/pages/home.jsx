@@ -27,11 +27,11 @@ export default class Home extends Component {
             </Block>
         </Section>
         <Band
-          text="Division"
-          spacer="rectangle"
+          text="Comé Conmigo"
+          spacer="circle"
           repeat={['true', 4]}
-          scroll={['true', 'slow']}
-          colorChange={['true', ['#ff0000', '#00ff00', '#ffff00']]}
+          scroll={['false', 'slow']}
+          colorChange={['true', [colors.spanish_pink, colors.laurel_green]]}
         />
         <FeaturedSection num={3} />
         <LinkedPost bg_image={spaghetti} />

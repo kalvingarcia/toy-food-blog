@@ -1,0 +1,13 @@
+.band {
+  height: 200px;
+  display: flex;
+  font-family: 'Mitr';
+  font-size: 40px;
+}
+.band span {
+  margin: auto;
+}
+
+.band svg {
+  margin: auto;
+}
