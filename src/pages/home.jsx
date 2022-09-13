@@ -6,6 +6,7 @@ import ImageWithCaption from '../components/image-with-caption';
 import Band from '../components/band';
 import FeaturedSection from '../components/featured-section';
 import LinkedPost from '../components/linked-post';
+import colors from '../assets/utils/colors';
 import me from '../assets/images/me.png';
 import rice from '../assets/images/rice.jpg';
 import spaghetti from '../assets/images/spaghetti.jpg'
@@ -13,7 +14,7 @@ import spaghetti from '../assets/images/spaghetti.jpg'
 export default class Home extends Component {
   render() {
     return (
-      <main style={{paddingTop: '50px'}}>
+      <main>
         <Section className='row' height='800px'>
             <Block className='col-sm'>
               <Parallax bg_image={rice} />

@@ -29,7 +29,7 @@ export default class Recipes extends Component {
 
   render() {
     return (
-      <main style={{paddingTop: '50px'}}>
+      <main>
         <Band
           text="Division"
           spacer="rectangle"
