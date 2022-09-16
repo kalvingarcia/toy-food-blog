@@ -7,7 +7,7 @@ import Band from '../components/band';
 import FeaturedSection from '../components/featured-section';
 import LinkedPost from '../components/linked-post';
 import colors from '../assets/utils/colors';
-import me from '../assets/images/me.png';
+import tamales from '../assets/images/tamales.jpg';
 import rice from '../assets/images/rice.jpg';
 import spaghetti from '../assets/images/spaghetti.jpg';
 
@@ -15,17 +15,14 @@ export default class Home extends Component {
   render() {
     return (
       <main>
-        <Section className='row' height='800px'>
-            <Block className='column-50'>
-              <Parallax bg_image={rice} />
-            </Block>
-            <Block className='column-50'>
-              <ImageWithCaption
-                image={me}
-                shape='circle'
-                caption="Welcome to our food blog"
-              />
-            </Block>
+        <Section className='row-800'>
+            <Parallax className='column-50' bg_image={rice} />
+            <ImageWithCaption
+              className='column-50'
+              image={tamales}
+              shape='circle'
+              caption="Welcome to our food blog"
+            />
         </Section>
         <Band
           text="Comé Conmigo"
@@ -35,7 +32,9 @@ export default class Home extends Component {
           colorChange={['true', [colors.spanish_pink, colors.laurel_green]]}
         />
         <FeaturedSection num={3} />
-        <LinkedPost bg_image={spaghetti} />
+        <Section>
+          <LinkedPost bg_image={spaghetti} />
+        </Section>
       </main>
     );
   }

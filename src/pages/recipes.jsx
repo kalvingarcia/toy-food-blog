@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Band from '../components/band';
 import PostDisplay from '../components/post-display';
+import colors from '../assets/utils/colors'
 
 export default class Recipes extends Component {
   constructor(props) {
@@ -31,11 +32,11 @@ export default class Recipes extends Component {
     return (
       <main>
         <Band
-          text="Division"
+          text="Recipes for you!"
           spacer="rectangle"
           repeat={['true', 4]}
           scroll={['true', 'slow']}
-          colorChange={['true', ['#ff0000', '#00ff00', '#ffff00']]}
+          colorChange={['false', [colors.pink_sherbert]]}
         />
         {this.posts.map(post => {
           return (

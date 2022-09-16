@@ -5,7 +5,10 @@ import './assets/utils/navbar.css';
 import './assets/utils/image-with-captions.css'
 import './assets/utils/band.css'
 import './assets/utils/layout.css';
-import './assets/utils/slide-left.css'
+import './assets/utils/slide-left.css';
+import './assets/utils/footer.css'
+import './assets/utils/featured-section.css';
+import './assets/utils/linked-post.css';
 import App from './app';
 import reportWebVitals from './reportWebVitals';
 
