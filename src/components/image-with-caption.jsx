@@ -1,17 +1,23 @@
 import React, {Component} from 'react';
+import Block from './block';
 
 export default class ImageWithCaption extends Component {
-
   render() {
     return (
-      <div className="image-with-captions">
+      <Block className={this.generate_class()}>
         <img src={this.props.image} alt="" />
         <svg height='30' width='30'>
           {this.draw_shape(this.props.shape)}
         </svg>
         <span>{this.props.caption}</span>
-      </div>
+      </Block>
     );
+  }
+
+  generate_class() {
+    if(this.props.className)
+      return `image-with-captions ${this.props.className}`;
+    return "image-with-captions";
   }
 
   draw_shape(shape) {
