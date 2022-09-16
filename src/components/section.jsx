@@ -1,9 +1,8 @@
 import React from 'react';
 
-export default function Section({className, height, color, children}) {
+export default function Section({className, color, children}) {
   var style = {
     overflow: 'hidden',
-    height: height,
     backgroundColor: color
   }
 
