@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Block from './block';
 
 export default class Parallax extends Component {
   state = {
@@ -11,9 +12,11 @@ export default class Parallax extends Component {
 
   render() {
     return (
-      <div style={this.parallax}>
-        <img src={this.props.bg_image} style={this.state.style} alt="" />
-      </div>
+      <Block className={this.props.className}>
+        <div style={this.parallax}>
+          <img src={this.props.bg_image} style={this.state.style} alt="" />
+        </div>
+      </Block>
     );
   }
 
