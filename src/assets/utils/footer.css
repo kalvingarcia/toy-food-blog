@@ -1,0 +1,111 @@
+.page-footer {
+  padding: 40px 0px 40px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-container {
+  justify-content: center;
+}
+
+.footer-sitemap {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-sitemap span {
+  magin: auto;
+  font-family: 'Mitr';
+  font-size: 30px;
+  color: #000000;
+}
+
+.footer-sitemap a {
+  text-decoration: none;
+  font-family: 'Athiti';
+  font-size: 30px;
+  magin: auto;
+  color: #000000;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-socials span {
+  magin: auto;
+  font-family: 'Mitr';
+  font-size: 30px;
+  color: #000000;
+}
+
+.footer-socials a {
+  height: 75px;
+  width: 75px;
+}
+
+.footer-socials svg {
+  height: 75px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contact span:first-child {
+  font-family: 'Mitr';
+  font-size: 30px;
+}
+
+.footer-contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-contact form > label {
+  font-family: 'Athiti';
+  font-size: 20px;
+  padding: 10px 0px 10px 0px;
+}
+
+.footer-contact form > input {
+  font-size: 20px;
+  width: 99%;
+  border: none;
+  outline: none;
+  font-family: 'Athiti';
+}
+
+.footer-contact form > textarea {
+  height: 100px;
+  width: 99%;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 20px;
+  font-family: 'Athiti';
+}
+
+.footer-contact form > button {
+  margin: 20px 0px 0px 0px;
+  align-self: flex-end;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-family: 'Athiti';
+  font-size: 20px;
+}
+
+.footer-copyright {
+  font-family: 'Athiti';
+  font-size: 20px;
+}
+
+.footer-authorship {
+  font-family: 'Athiti';
+  font-size: 20px;
+}
