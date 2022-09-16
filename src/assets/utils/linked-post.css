@@ -1,0 +1,30 @@
+.linked-post {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.linked-post-head {
+  margin: auto;
+  font-family: 'Mitr';
+  font-size: 30px;
+}
+
+.post-block {
+  margin: auto;
+  padding: 30px;
+  font-family: 'Athiti';
+}
+
+.linked-post-title {
+  font-style: oblique;
+  font-size: 30px;
+}
+
+.linked-post-desc {
+  font-size: 25px;
+}
