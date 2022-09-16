@@ -19,13 +19,14 @@
 .nav-link {
   float: left;
 }
+
 .nav-link a {
   display: block;
   text-align: center;
   padding: 20px;
   text-decoration: none;
 }
+
 .nav-link a:hover {
-  background-color: #000000;
-  opacity: .3;
+  background-color: #c35555;
 }
