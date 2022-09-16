@@ -26,21 +26,18 @@ export default class FeaturedSection extends Component {
 
   render() {
     return (
-      <Section>
-        <div>
-          <div>
-            <span>Title</span>
-          </div>
-          <div>
-            <span>Subtitle</span>
-          </div>
+      <Section className="featured-section">
+        <div className="featured-section-head">
+          <span>Featured Recipes</span>
+          <span>Subtitle</span>
         </div>
-        <div className="row">
+        <div className="row featured-section-body">
+          <div className="featured-section-back" />
           {this.display.map(post => {
             return (
               <FeaturedPost
                 key={post.id}
-                className="col-sm"
+                className={this.generate_col()}
                 source={post.source}
                 head={post.title}
                 body={post.content}
@@ -50,5 +47,9 @@ export default class FeaturedSection extends Component {
         </div>
       </Section>
     );
+  }
+
+  generate_col() {
+    return `column-${Math.floor(100 / this.props.num)}`
   }
 }
