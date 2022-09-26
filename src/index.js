@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './assets/utils/body.css';
-import './assets/utils/navbar.css';
-import './assets/utils/image-with-captions.css'
-import './assets/utils/band.css'
-import './assets/utils/layout.css';
-import './assets/utils/slide-left.css';
-import './assets/utils/footer.css'
-import './assets/utils/featured-section.css';
-import './assets/utils/linked-post.css';
+import './utils/body.css';
+import './utils/navbar.css';
+import './utils/image-with-captions.css'
+import './utils/band.css'
+import './utils/layout.css';
+import './utils/slide-left.css';
+import './utils/footer.css'
+import './utils/featured-section.css';
+import './utils/linked-post.css';
 import App from './app';
 import reportWebVitals from './reportWebVitals';
 

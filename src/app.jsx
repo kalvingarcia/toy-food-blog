@@ -6,14 +6,14 @@ import Recipes from './pages/recipes';
 import About from './pages/about';
 import Post from './pages/post';
 import Footer from './components/footer';
-import colors from './assets/utils/colors';
+import {COLORS} from './utils/constants';
 
 export default function App() {
   return (
     <Router>
       <Navbar
         pos='sticky'
-        color={colors.ny_pink}
+        color={COLORS.ny_pink}
       />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -21,7 +21,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/recipes/:postID/:postName" element={<Post />} />
       </Routes>
-      <Footer color={colors.laurel_green} />
+      <Footer color={COLORS.laurel_green} />
     </Router>
   );
 }
