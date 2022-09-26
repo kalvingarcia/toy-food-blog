@@ -14,7 +14,7 @@ export default class Parallax extends Component {
     return (
       <Block className={this.props.className}>
         <div style={this.parallax}>
-          <img src={this.props.bg_image} style={this.state.style} alt="" />
+          <img src={process.env.PUBLIC_URL + "/images/" + this.props.source} style={this.state.style} alt="" />
         </div>
       </Block>
     );

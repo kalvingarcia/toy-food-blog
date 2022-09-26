@@ -1,31 +1,19 @@
 import React, {Component} from 'react';
 import Band from '../components/band';
 import PostDisplay from '../components/post-display';
-import colors from '../assets/utils/colors'
+import axios from "axios";
+
+import {ALL_RECIPES_API, COLORS} from "../utils/constants";
 
 export default class Recipes extends Component {
-  constructor(props) {
-    super(props);
-    this.posts = [];
+  state = {
+    recipes: []
+  }
 
-    for(let i = 0; i < 3; i++) {
-      //call to json with post
-      var image = [
-        require('../assets/images/cheese_cake.jpg'),
-        require('../assets/images/partner.png'),
-        require('../assets/images/burger.jpg')
-      ];
-
-      this.posts.push({
-        id: i,
-        source: image[i],
-        title: "Title",
-        content: "This is the content.",
-        date: '10-31-22'
-      });
-    }
-
-    console.log("here")
+  componentDidMount() {
+    axios.get(ALL_RECIPES_API).then(response => {
+      this.setState({recipes: response.data})
+    });
   }
 
   render() {
@@ -36,18 +24,18 @@ export default class Recipes extends Component {
           spacer="rectangle"
           repeat={['true', 4]}
           scroll={['true', 'slow']}
-          colorChange={['false', [colors.pink_sherbert]]}
+          colorChange={['false', [COLORS.pink_sherbert]]}
         />
-        {this.posts.map(post => {
+        {this.state.recipes.map(recipe => {
           return (
             <PostDisplay
-              key={post.id}
-              source={post.source}
-              head={post.title}
-              body={post.content}
-              date={post.date}
+              key={recipe.pk}
+              source={recipe.source}
+              head={recipe.title}
+              body={recipe.body}
+              date={recipe.date}
             />
-          );
+          )
         })}
       </main>
     );

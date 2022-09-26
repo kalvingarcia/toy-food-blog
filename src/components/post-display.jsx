@@ -5,7 +5,7 @@ export default class PostDisplay extends Component {
     return (
       <div>
         <div>
-          <img src={this.props.source} height='800px' alt="" />
+          <img src={process.env.PUBLIC_URL + "/images/" + this.props.source} height='800px' alt="" />
         </div>
         <div>
           <span>{this.props.head}</span>

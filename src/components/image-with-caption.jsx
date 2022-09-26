@@ -5,7 +5,7 @@ export default class ImageWithCaption extends Component {
   render() {
     return (
       <Block className={this.generate_class()}>
-        <img src={this.props.image} alt="" />
+        <img src={process.env.PUBLIC_URL + "/images/" + this.props.source} alt="" />
         <svg height='30' width='30'>
           {this.draw_shape(this.props.shape)}
         </svg>

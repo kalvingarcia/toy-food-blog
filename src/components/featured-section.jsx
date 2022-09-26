@@ -1,27 +1,20 @@
 import React, {Component} from 'react';
 import Section from './section';
 import FeaturedPost from './featured-post';
+import axios from 'axios';
+
+import {GET_FEATURED_API} from '../utils/constants';
 
 export default class FeaturedSection extends Component {
-  constructor(props) {
-    super(props);
-    this.display = [];
+  state = {
+    featured_recipes: []
+  }
 
-    for(let i = 0; i < props.num; i++) {
-      //call to json with post
-      var image = [
-        require('../assets/images/cheese_cake.jpg'),
-        require('../assets/images/partner.png'),
-        require('../assets/images/burger.jpg')
-      ];
-
-      this.display.push({
-        id: i,
-        source: image[i],
-        title: "Title",
-        content: "This is the content."
-      });
-    }
+  componentDidMount() {
+    axios.get(GET_FEATURED_API).then(response => {
+      //randomly grab recipes from the featured set based on 'num' prop
+      this.setState({featured_recipes: response.data})
+    });
   }
 
   render() {
@@ -33,14 +26,14 @@ export default class FeaturedSection extends Component {
         </div>
         <div className="row featured-section-body">
           <div className="featured-section-back" />
-          {this.display.map(post => {
+          {this.state.featured_recipes.map(post => {
             return (
               <FeaturedPost
-                key={post.id}
+                key={post.pk}
                 className={this.generate_col()}
                 source={post.source}
                 head={post.title}
-                body={post.content}
+                body={post.body}
               />
             );
           })}
