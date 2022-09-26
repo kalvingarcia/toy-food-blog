@@ -41,13 +41,13 @@ export default function Footer({color}) {
         <div className="footer-contact column-25">
           <span>Contact</span>
           <form>
-            <label for="fname">First Name *</label>
+            <label htmlFor="fname">First Name *</label>
             <input type="text" id="fname" name="fname" />
-            <label for="lname">Last Name *</label>
+            <label htmlFor="lname">Last Name *</label>
             <input type="text" id="lname" name="lname" />
-            <label for="email">Email *</label>
+            <label htmlFor="email">Email *</label>
             <input type="text" id="email" name="email" />
-            <label for="msg">Message</label>
+            <label htmlFor="msg">Message</label>
             <textarea type="text" id="msg" name="msg" />
             <button>Submit</button>
           </form>

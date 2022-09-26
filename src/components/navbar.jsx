@@ -21,7 +21,7 @@ export default class Navbar extends Component {
           <ul className="nav-items">
             <li className="nav-link">
               <NavLink
-                exact to="/"
+                to="/"
                 style={({isActive}) => ({visibility: isActive ? 'hidden' : '', color: '#222222'})}
               >
                 Home
