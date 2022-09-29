@@ -9,6 +9,7 @@ import './utils/slide-left.css';
 import './utils/footer.css'
 import './utils/featured-section.css';
 import './utils/linked-post.css';
+import './utils/parallax-banner.css';
 import App from './app';
 import reportWebVitals from './reportWebVitals';
 
