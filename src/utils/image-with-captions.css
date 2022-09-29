@@ -4,12 +4,6 @@
   align-items: center;
 }
 
-.image-with-captions img {
-  padding: 30px;
-  height: 400px;
-  width: 400px;
-}
-
 .image-with-captions span {
   font-family: 'Athiti';
   font-size: 30px;
