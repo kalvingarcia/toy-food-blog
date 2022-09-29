@@ -57,7 +57,7 @@ export default function Footer({color}) {
         <span>© 2022 by Comí Comé.</span>
       </div>
       <div className="footer-authorship">
-        <span>Designed by Sam Rodriguez. Built by Kalvin Garcia.</span>
+        <span>Built by Kalvin Garcia.</span>
       </div>
     </footer>
   );

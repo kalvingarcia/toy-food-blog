@@ -74,20 +74,32 @@
 
 .footer-contact form > input {
   font-size: 20px;
-  width: 99%;
-  border: none;
+  width: 98%;
+  border: 2px solid transparent;
   outline: none;
   font-family: 'Athiti';
+}
+.footer-contact form > input:hover {
+  background-color: #e0e0e0;
+}
+.footer-contact form > input:focus {
+  border: 2px solid black;
 }
 
 .footer-contact form > textarea {
   height: 100px;
-  width: 99%;
-  border: none;
+  width: 98%;
+  border: 2px solid transparent;
   outline: none;
   resize: none;
   font-size: 20px;
   font-family: 'Athiti';
+}
+.footer-contact form > textarea:hover {
+  background-color: #e0e0e0;
+}
+.footer-contact form > textarea:focus {
+  border: 2px solid black;
 }
 
 .footer-contact form > button {
@@ -98,6 +110,14 @@
   border: none;
   font-family: 'Athiti';
   font-size: 20px;
+}
+
+.footer-contact form > button:hover {
+  background-color: #444;
+}
+
+.footer-contact form > button:active {
+  background-color: #59613F;
 }
 
 .footer-copyright {

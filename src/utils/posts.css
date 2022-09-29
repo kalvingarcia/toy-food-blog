@@ -1,0 +1,101 @@
+.post-filter {
+  position: sticky;
+  top: 83px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: #F0B5B3;
+  padding: 30px;
+}
+
+.post-filter span {
+  font-family: "Mitr";
+  font-size: 20px;
+  align-self: flex-end;
+}
+
+.post-filter button {
+  align-self: flex-end;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-family: 'Athiti';
+  font-size: 20px;
+}
+
+.post-filter button:hover {
+  background-color: #444;
+}
+
+.post-filter button:active {
+  background-color: #9B504D;
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.filter-container label {
+  font-family: "Athiti";
+  font-size: 20px;
+  margin: 10px;
+}
+.filter-container input[type="checkbox"] {
+  appearance: none;
+  font: inherit;
+  margin-right: 10px;
+  height: 1.15em;
+  width: 1.15em;
+  border: .15em solid black;
+  display: inline-grid;
+  place-content: center;
+  background-color: #f0f0f0;
+}
+
+.filter-container input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em black;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.post-grid {
+  margin: auto;
+  width: 90%;
+}
+
+.post-display {
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FE64A360;
+  text-decoration: none;
+  color: black;
+  border-radius: 20px;
+}
+.post-display span:nth-child(2) {
+  font-family: "Mitr";
+  font-size: 20px;
+  text-align: center;
+}
+.post-display span {
+  font-family: "Athiti";
+  font-size: 15px;
+  text-align: center;
+}
+.post-display p {
+  text-align: left;
+  font-style: "Athiti";
+  font-size: 20px;
+}
