@@ -1,22 +1,22 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
+import Block from './block';
+import ImageFrame from './image-frame';
 
 export default class PostDisplay extends Component {
   render() {
     return (
-      <div>
-        <div>
-          <img src={process.env.PUBLIC_URL + "/images/" + this.props.source} height='800px' alt="" />
-        </div>
-        <div>
+      <Block className="column-25">
+        <Link className="post-display" to={`/recipes/${this.props.id}`}>
+          <ImageFrame
+            source={this.props.source}
+            size={300}
+          />
           <span>{this.props.head}</span>
-        </div>
-        <div>
           <p>{this.props.body}</p>
-        </div>
-        <div>
           <span>{this.props.date}</span>
-        </div>
-      </div>
+        </Link>
+      </Block>
     );
   }
 }

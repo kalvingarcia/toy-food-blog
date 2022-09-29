@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
 import Block from './block';
+import ImageFrame from './image-frame';
 
 export default class ImageWithCaption extends Component {
   render() {
     return (
       <Block className={this.generate_class()}>
-        <img src={process.env.PUBLIC_URL + "/images/" + this.props.source} alt="" />
+        <ImageFrame
+          source={this.props.source}
+          size={400}
+        />
         <svg height='30' width='30'>
           {this.draw_shape(this.props.shape)}
         </svg>
