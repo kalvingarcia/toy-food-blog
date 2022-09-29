@@ -4,9 +4,10 @@ import Block from './block';
 export default class Parallax extends Component {
   state = {
     style: {
+      width: '200%',
       objectFit: 'cover',
       willChange: 'transform',
-      transform: `translate(-10%, -50%)`
+      transform: `translate(-25%, -50%)`
     }
   }
 
@@ -21,7 +22,8 @@ export default class Parallax extends Component {
   }
 
   parallax = {
-    objectFit: 'contain',
+    width: '100%',
+    objectFit: 'cover',
     overflow: 'hidden'
   }
 
@@ -35,10 +37,13 @@ export default class Parallax extends Component {
 
   handle_scroll = event => {
     var delta = [
-      -10 + event.composedPath()[1].scrollX * .01,
-      -50 + event.composedPath()[1].scrollY * .01
+      -25 + event.composedPath()[1].scrollX * .02,
+      -50 + event.composedPath()[1].scrollY * .02
     ];
     this.setState({style: {
+      width: '200%',
+      objectFit: 'cover',
+      willChange: 'transform',
       transform: `translate(${delta[0]}%, ${delta[1]}%)`
     }});
   }
