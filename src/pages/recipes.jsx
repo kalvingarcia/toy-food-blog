@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+import Section from '../components/section';
 import Band from '../components/band';
-import PostDisplay from '../components/post-display';
+import PostGrid from '../components/post-grid';
+import PostFilter from '../components/post-filter';
 import axios from "axios";
 
-import {ALL_RECIPES_API, COLORS} from "../utils/constants";
+import {ALL_RECIPES_API, FILTER_RECIPES_API, COLORS} from "../utils/constants";
 
 export default class Recipes extends Component {
   state = {
@@ -11,6 +13,19 @@ export default class Recipes extends Component {
   }
 
   componentDidMount() {
+    this.reset_list();
+  }
+
+  handle_filter = filters => {
+    if(filters !== "")
+      axios.get(FILTER_RECIPES_API + filters).then(response => {
+        this.setState({recipes: response.data})
+      });
+    else
+      this.reset_list();
+  }
+
+  reset_list() {
     axios.get(ALL_RECIPES_API).then(response => {
       this.setState({recipes: response.data})
     });
@@ -26,17 +41,12 @@ export default class Recipes extends Component {
           scroll={['true', 'slow']}
           colorChange={['false', [COLORS.pink_sherbert]]}
         />
-        {this.state.recipes.map(recipe => {
-          return (
-            <PostDisplay
-              key={recipe.pk}
-              source={recipe.source}
-              head={recipe.title}
-              body={recipe.body}
-              date={recipe.date}
-            />
-          )
-        })}
+        <PostFilter
+          filter={this.handle_filter}
+        />
+        <PostGrid
+          recipes={this.state.recipes}
+        />
       </main>
     );
   }

@@ -30,9 +30,10 @@ export default class FeaturedSection extends Component {
             return (
               <FeaturedPost
                 key={post.pk}
+                pk={post.pk}
                 className={this.generate_col()}
                 source={post.source}
-                head={post.title}
+                title={post.title}
                 body={post.body}
               />
             );

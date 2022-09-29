@@ -21,7 +21,7 @@ export default class LinkedPost extends Component {
     return (
       <Block className={this.generate_class()}>
         <Parallax className='column-50' source={this.state.recipe.source} />
-        <Link className='column-50 linked-post' to="/recipes">
+        <Link className='column-50 linked-post' to={`/recipes/${this.state.recipe.pk}`}>
           <span className="linked-post-head">Newest Recipe!</span>
           <div className="post-block">
             <span className="linked-post-title">{this.state.recipe.title}</span>

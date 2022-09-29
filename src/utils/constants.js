@@ -8,6 +8,8 @@ export const COLORS = {
 
 export const ALL_RECIPES_API = "http://localhost:8000/api/recipe/";
 export const FILTER_RECIPES_API = "http://localhost:8000/api/recipe/filter/";
-export const NEWEST_POST_API = "http://localhost:8000/api/recipe/newest"
-export const GET_FEATURED_API = "http://localhost:8000/api/recipe/featured";
+export const NEWEST_POST_API = "http://localhost:8000/api/recipe/newest/"
+export const GET_FEATURED_API = "http://localhost:8000/api/recipe/featured/";
 export const RECIPE_BY_ID_API = "http://localhost:8000/api/recipe-id/";
+
+export const ALL_COLLECTIONS_API = "http://localhost:8000/api/collections/";
