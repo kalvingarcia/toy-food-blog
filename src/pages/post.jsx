@@ -21,31 +21,43 @@ export default function Post() {
       setTags(response.data[2]);
       setSteps(response.data[0].steps.split(";"))
     });
-  }, [])
+  }, [id])
 
   return (
     <main>
       <ParallaxBanner source={recipe.source} text={recipe.title} />
-      <Section>
-        <ul>
-          <li></li>
-        </ul>
-      </Section>
-      <Section>
-        <Block>
-          <ul>
+      <Section className="row recipe-section">
+      <Block className="column-25 ingredient-block">
+          <span>Ingredients</span>
+          <ul className="ingredient-list">
+            {
+              ingredients.map(ingredient => {
+                return (
+                  <li>
+                    <span>{ingredient.measure}</span>
+                    <span>{ingredient.unit}</span>
+                    <span>{ingredient.name}</span>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </Block>
+        <Block className="column-75 content-block">
+          <span>Tags</span>
+          <ul className="recipe-tags">
             {tags.map(tag => {
               return(
                 <li>
-                  <span>{tag.name}</span>
+                  {tag.name}
                 </li>
               );
             })}
           </ul>
-        </Block>
-        <Block>
-          <p>{recipe.body}</p>
-          <ol>
+          <span>Description</span>
+          <p className="recipe-body">{recipe.body}</p>
+          <span>Directions</span>
+          <ol className="recipe-steps">
             {steps.map(step => {
               return (
                 <li>

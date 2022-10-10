@@ -1,0 +1,63 @@
+.recipe-section {
+    font-family: "Athiti";
+    height: 75vh;
+}
+
+.ingredient-block {
+  font-size: 25px;
+  background: #F0B5B3;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: inherit;
+  overflow: auto;
+}
+
+.ingredient-block span {
+  margin: 40px 0px 0px 40px;
+  font-size: 30px;
+}
+
+.ingredient-list {
+  list-style: none;
+}
+
+.ingredient-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.ingredient-list li > span {
+  margin: 0px;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.content-block {
+  justify-content: flex-start;
+  align-items: center;
+  height: inherit;
+  overflow: auto;
+}
+
+.content-block span {
+  font-size: 30px;
+}
+
+.recipe-tags {
+  font-size: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.recipe-body {
+  font-size: 25px;
+  text-align: left;
+}
+
+.recipe-steps {
+  font-size: 25px;
+  text-align: left;
+}
