@@ -6,8 +6,7 @@ export default class Parallax extends Component {
     style: {
       width: '200%',
       objectFit: 'cover',
-      willChange: 'transform',
-      transform: `translate(-25%, -50%)`
+      transform: `translate(-25%, -50%)`,
     }
   }
 

@@ -3,11 +3,12 @@ import React, {Component} from 'react';
 export default class Shader extends Component {
   state = {
       position: 'relative',
-      backgroundColor: '#000000',
+      backgroundColor: this.props.color,
       zIndex: 1,
       height: '100vh',
       width: '100%',
-      opacity: '70%'
+      opacity: this.props.opacity,
+      mixBlendMode: this.props.blendMode
   }
 
   render() {
