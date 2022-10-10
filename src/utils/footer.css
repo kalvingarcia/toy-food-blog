@@ -94,6 +94,7 @@
   resize: none;
   font-size: 20px;
   font-family: 'Athiti';
+  overflow: auto;
 }
 .footer-contact form > textarea:hover {
   background-color: #e0e0e0;
