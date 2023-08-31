@@ -12,6 +12,7 @@ import './utils/linked-post.css';
 import './utils/posts.css';
 import './utils/parallax-banner.css';
 import './utils/recipe.css';
+import './utils/text-block.css';
 import App from './app';
 import reportWebVitals from './reportWebVitals';
 

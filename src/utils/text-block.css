@@ -1,0 +1,19 @@
+.text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-block h1 {
+    font-family: 'Mitr';
+    font-weight: 400;
+    font-size: 40px;
+    padding: 20px;
+}
+
+.text-block span {
+    font-family: 'Athiti';
+    font-size: 30px;
+    padding: 20px;
+    margin: 0px 100px;
+}
