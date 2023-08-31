@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/toy-food-blog/static/css/main.12247ffb.css",
+    "main.js": "/toy-food-blog/static/js/main.be0ceb74.js",
+    "static/js/787.69ece8c5.chunk.js": "/toy-food-blog/static/js/787.69ece8c5.chunk.js",
+    "index.html": "/toy-food-blog/index.html",
+    "main.12247ffb.css.map": "/toy-food-blog/static/css/main.12247ffb.css.map",
+    "main.be0ceb74.js.map": "/toy-food-blog/static/js/main.be0ceb74.js.map",
+    "787.69ece8c5.chunk.js.map": "/toy-food-blog/static/js/787.69ece8c5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12247ffb.css",
+    "static/js/main.be0ceb74.js"
+  ]
+}
